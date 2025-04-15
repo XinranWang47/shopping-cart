@@ -1,54 +1,70 @@
-# React + TypeScript + Vite
+# Simple Shopping Cart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple shopping cart application built with React. It allows users to view products, add items to their cart, increment/decrement the quantity of items in the cart, and delete items from the cart. It also calculates the total price of the items in the cart.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Display a list of products with their prices
+- Add products to the shopping cart
+- Increment and decrement the quantity of products in the cart
+- Remove products from the cart
+- Calculate and display the total price of items in the cart
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React**: A JavaScript library for building user interfaces
+- **React Hooks**: `useReducer`, `useState`
+- **TypeScript**: A typed superset of JavaScript for better tooling and safety
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Installation
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+To run this project locally, follow these steps:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1.  Clone this repository:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+    ```bash
+    git clone https://github.com/your-username/shopping-cart.git
+    ```
+
+2.  Navigate to the project folder:
+    ```bash
+    cd shopping-cart
+    ```
+3.  Install dependencies:
+    ```bash
+    npm install
+    ```
+4.  Run the development server:
+    ```bash
+    npm start
+    ```
+
+## Project Structure
+
+- App.tsx: The main component that holds the application logic and state management.
+
+- ProductList.tsx: Displays the list of available products and allows users to add them to the cart.
+
+- Cart.tsx: Displays the items in the shopping cart, allows users to change quantities, and calculates the total price.
+
+- products.ts: An array of product data (used to display products in the product list).
+
+## Usage
+
+- You can add products to the cart by clicking the "Add to cart" button.
+
+- The cart will update with the selected products, showing the name, quantity, price, and total price for each item.
+
+- You can increment or decrement the quantity of a product using the plus and minus buttons.
+
+- You can remove a product from the cart by clicking the "Delete" button.
+
+- The total price of the cart is calculated dynamically based on the products and their quantities.
+
+## Future Improvements
+
+- Add product categories or filters.
+
+- Store cart data in local storage or a database to persist the cart across sessions.
+
+- Add user authentication for a more complete shopping experience.
