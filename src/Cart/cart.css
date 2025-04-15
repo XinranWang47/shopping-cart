@@ -1,0 +1,9 @@
+.cart-item{
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+.quan-span{
+  display: flex;
+  align-items: center;
+}

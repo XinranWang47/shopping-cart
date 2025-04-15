@@ -1,0 +1,10 @@
+.pro-list{
+  display: grid;
+  grid-template-rows:1fr 1fr;
+  grid-template-columns:repeat(5,1fr) ;
+}
+.product-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
